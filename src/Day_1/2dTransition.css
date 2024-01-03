@@ -19,10 +19,10 @@
   text-transform: capitalize;
   font-family: "Inter", sans-serif;
   transition: all 0.5s linear;
+  background-color: transparent;
 }
 
 .primary {
-  background-color: transparent;
   color: white;
 }
 
@@ -39,10 +39,10 @@
   background-color: #aad9bb;
 }
 .skew-box {
-    background-color: #756AB6;
+  background-color: #756ab6;
 }
 .scale-box {
-    background-color: #EE7214;
+  background-color: #ee7214;
 }
 
 /* Moving Box */
@@ -73,28 +73,28 @@
 
 /* Skewing Box */
 .isSkewing-x {
-    transform: skewX(40deg);
+  transform: skewX(40deg);
 }
 
 .isSkewing-y {
-    transform: skewY(40deg);
+  transform: skewY(40deg);
 }
 
 .isSkewing-xy {
-    transform: skew(40deg);
+  transform: skew(40deg);
 }
 
 /* Skewing Box */
 .isScaling-x {
-    transform: scaleX(1.25);
+  transform: scaleX(1.25);
 }
 
 .isScaling-y {
-    transform: scaleY(1.25);
+  transform: scaleY(1.25);
 }
 
 .isScaling-xy {
-    transform: scale(1.25);
+  transform: scale(1.25);
 }
 
 /* Transition type */
@@ -108,4 +108,67 @@
 
 .cubic-bezier .box {
   transition-timing-function: cubic-bezier(0, 2.07, 1, -1.52);
+}
+
+/* Button animations */
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons .primary:hover {
+  background-color: transparent;
+}
+.sweep {
+  position: relative;
+  background-color: transparent;
+  overflow: hidden;
+}
+.sweep:hover {
+  color: #fff;
+  border: transparent;
+}
+
+.sweep::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .5s;
+  background-color: #df826c;
+}
+
+.right::after {
+  transform: translateX(100%);
+}
+
+.left::after {
+    transform: translateX(-100%);
+}
+.top::after {
+    transform: translateY(100%);
+}
+.bottom::after {
+    transform: translateY(-100%);
+}
+
+.right:hover::after,
+.left:hover::after {
+  transform: translateX(0);
+}
+
+.top:hover::after,
+.bottom:hover::after {
+    transform: translateY(0);
+}
+
+.middle::after {
+  transform: scale(0);
+}
+
+.middle:hover::after {
+  transform: scale(1);
 }

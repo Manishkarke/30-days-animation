@@ -11,6 +11,7 @@ import CubicSkew from "./Skew/CubicSkew";
 import LinearScale from "./Scale/LinearScale";
 import EaseScale from "./Scale/EaseScale";
 import CubicScale from "./Scale/CubicScale";
+import Buttons from "./Others/Buttons";
 
 function SimpleTransition() {
   return (
@@ -51,6 +52,9 @@ function SimpleTransition() {
       <EaseScale />
       <hr />
       <CubicScale />
+      <hr />
+      {/* Some Practical 2d Transition */}
+      <Buttons />
     </section>
   );
 }
