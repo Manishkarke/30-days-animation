@@ -6,6 +6,8 @@ import LinearRotate from "./Rotate/LinearRoate";
 import EaseRotate from "./Rotate/EaseRotate";
 import CubicRotate from "./Rotate/CubicRotate";
 import LinearSkew from "./Skew/LinearSkew";
+import EaseSkew from "./Skew/EaseSkew";
+import CubicSkew from "./Skew/CubicSkew";
 
 function SimpleTransition() {
   return (
@@ -19,19 +21,28 @@ function SimpleTransition() {
         can do that with transition property.
       </p>
       <hr />
+      {/* translate component */}
       <LinearTranslate />
       <hr />
       <EaseTranslate />
       <hr />
       <CubicTranslate />
       <hr />
+      {/* Rotate components */}
       <LinearRotate />
       <hr />
       <EaseRotate />
       <hr />
       <CubicRotate />
       <hr />
+      {/* Skew Components */}
       <LinearSkew />
+      <hr />
+      <EaseSkew />
+      <hr />
+      <CubicSkew />
+      <hr />
+      {/* Scaling Components */}
     </section>
   );
 }
