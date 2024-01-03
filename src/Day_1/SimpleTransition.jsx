@@ -8,6 +8,9 @@ import CubicRotate from "./Rotate/CubicRotate";
 import LinearSkew from "./Skew/LinearSkew";
 import EaseSkew from "./Skew/EaseSkew";
 import CubicSkew from "./Skew/CubicSkew";
+import LinearScale from "./Scale/LinearScale";
+import EaseScale from "./Scale/EaseScale";
+import CubicScale from "./Scale/CubicScale";
 
 function SimpleTransition() {
   return (
@@ -43,6 +46,11 @@ function SimpleTransition() {
       <CubicSkew />
       <hr />
       {/* Scaling Components */}
+      <LinearScale />
+      <hr />
+      <EaseScale />
+      <hr />
+      <CubicScale />
     </section>
   );
 }

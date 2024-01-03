@@ -41,8 +41,11 @@
 .skew-box {
     background-color: #756AB6;
 }
+.scale-box {
+    background-color: #EE7214;
+}
 
-/* Moving Box at linear speed */
+/* Moving Box */
 .isMoving-x {
   transform: translateX(70px);
 }
@@ -55,7 +58,7 @@
   transform: translate(70px, 70px);
 }
 
-/* Rotating Box at linear speed */
+/* Rotating Box */
 .isRotating-x {
   transform: rotateX(40deg);
 }
@@ -68,6 +71,7 @@
   transform: rotate(40deg);
 }
 
+/* Skewing Box */
 .isSkewing-x {
     transform: skewX(40deg);
 }
@@ -78,6 +82,19 @@
 
 .isSkewing-xy {
     transform: skew(40deg);
+}
+
+/* Skewing Box */
+.isScaling-x {
+    transform: scaleX(1.25);
+}
+
+.isScaling-y {
+    transform: scaleY(1.25);
+}
+
+.isScaling-xy {
+    transform: scale(1.25);
 }
 
 /* Transition type */
