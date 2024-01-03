@@ -1,0 +1,78 @@
+.box {
+  width: 300px;
+  height: 300px;
+  font-size: 1.25rem;
+  padding: 1em;
+  margin-bottom: 1.75rem;
+
+  border-radius: 12px;
+  word-wrap: break-word;
+  transition: all 2s;
+}
+
+.btn {
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  padding: 0.75em 1.5em;
+  border-radius: 10px;
+  border: 1px solid white;
+  text-transform: capitalize;
+  font-family: "Inter", sans-serif;
+  transition: all 0.5s linear;
+}
+
+.primary {
+  background-color: transparent;
+  color: white;
+}
+
+.primary:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #121212;
+}
+
+.translate-box {
+  background-color: var(--clr-dark-theme-1);
+}
+.rotate-box {
+  background-color: #aad9bb;
+}
+/* Moving Box at linear speed */
+.isMoving-x {
+  transform: translateX(70px);
+}
+
+.isMoving-y {
+  transform: translateY(70px);
+}
+
+.isMoving-xy {
+  transform: translate(70px, 70px);
+}
+
+/* Rotating Box at linear speed */
+.isRotating-x {
+  transform: rotateX(40deg);
+}
+
+.isRotating-y {
+  transform: rotateY(40deg);
+}
+
+.isRotating-z {
+  transform: rotate(40deg);
+}
+
+/* Transition type */
+.linear .box {
+  transition-timing-function: linear;
+}
+
+.ease .box {
+  transition-timing-function: ease;
+}
+
+.cubic-bezier .box {
+  transition-timing-function: cubic-bezier(0, 2.07, 1, -1.52);
+}

@@ -1,0 +1,64 @@
+hr {
+  margin: 2rem 0;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2em 1em;
+}
+
+.box-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  justify-content: space-between;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 32px;
+  font-weight: 500;
+  font-family: "Red Hat Display";
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.section-title span {
+  letter-spacing: 2px;
+  padding: 0.35em;
+  border-bottom: 1px solid #ffffff;
+}
+
+.speed-type {
+  text-transform: capitalize;
+  text-decoration: dotted;
+  color: #FF5252;
+}
+
+.animation-type {
+  font-size: 1.25rem;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Red Hat Display";
+  margin-bottom: 1em;
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  line-height: 32px;
+  font-size: 1.25rem;
+  color: #C0C5D0;
+  margin-bottom: 1.5rem;
+}
+
+.description::first-letter {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
