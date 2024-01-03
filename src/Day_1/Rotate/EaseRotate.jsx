@@ -12,7 +12,7 @@ export default function EaseRotate() {
   };
   return (
     <div className="ease">
-      <SectionTitle animationType={"rotate"} Speed={"ease"} />
+      <SectionTitle animationType={"Rotate"} Speed={"ease"} />
 
       <BoxContainer>
         <Boxes animationType={"rotate"} content={"normal box"} />

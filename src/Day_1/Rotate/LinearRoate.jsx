@@ -12,7 +12,7 @@ export default function LinearRotate() {
   };
   return (
     <div className="linear">
-      <SectionTitle animationType={"rotate"} Speed={"linear"} />
+      <SectionTitle animationType={"Rotate"} Speed={"linear"} />
 
       <BoxContainer>
         <Boxes animationType={"rotate"} content={"normal box"} />

@@ -5,6 +5,7 @@ import CubicTranslate from "./Translate/CubicTranslate";
 import LinearRotate from "./Rotate/LinearRoate";
 import EaseRotate from "./Rotate/EaseRotate";
 import CubicRotate from "./Rotate/CubicRotate";
+import LinearSkew from "./Skew/LinearSkew";
 
 function SimpleTransition() {
   return (
@@ -29,6 +30,8 @@ function SimpleTransition() {
       <EaseRotate />
       <hr />
       <CubicRotate />
+      <hr />
+      <LinearSkew />
     </section>
   );
 }

@@ -38,6 +38,10 @@
 .rotate-box {
   background-color: #aad9bb;
 }
+.skew-box {
+    background-color: #756AB6;
+}
+
 /* Moving Box at linear speed */
 .isMoving-x {
   transform: translateX(70px);
@@ -62,6 +66,18 @@
 
 .isRotating-z {
   transform: rotate(40deg);
+}
+
+.isSkewing-x {
+    transform: skewX(40deg);
+}
+
+.isSkewing-y {
+    transform: skewY(40deg);
+}
+
+.isSkewing-xy {
+    transform: skew(40deg);
 }
 
 /* Transition type */

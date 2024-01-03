@@ -4,37 +4,39 @@ import Boxes from "../Boxes";
 import Button from "../Button";
 import BoxContainer from "../BoxContainer";
 
-export default function CubicRotate() {
+export default function LinearSkew() {
   const [activateAnimation, setActivateAnimation] = useState(false);
 
   const activateAnimationFunc = () => {
     setActivateAnimation(!activateAnimation);
   };
   return (
-    <div className="cubic-bezier">
-      <SectionTitle animationType={"Rotate"} Speed={"cubic-bezier"} />
+    <div className="linear">
+      <SectionTitle animationType={"Skew"} Speed={"linear"} />
 
       <BoxContainer>
-        <Boxes animationType={"rotate"} content={"normal box"} />
+        <Boxes animationType={"skew"} content={"normal box"} />
+
         <Boxes
-          animationType={"rotate"}
+          animationType={"skew"}
           axis={"x"}
-          content={"rotating 40deg in x-axis"}
+          content={"skewing 40deg in x-axis"}
           isActive={activateAnimation}
         />
         <Boxes
-          animationType={"rotate"}
+          animationType={"skew"}
           axis={"y"}
-          content={"rotating 40deg in y axis"}
+          content={"skewing 40deg in y axis"}
           isActive={activateAnimation}
         />
         <Boxes
-          animationType={"rotate"}
-          axis={"z"}
-          content={"rotating 40deg in z-axis"}
+          animationType={"skew"}
+          axis={"xy"}
+          content={"skewing 40deg in both x-axis and y-axis"}
           isActive={activateAnimation}
         />
       </BoxContainer>
+
       <Button
         onClickHandle={activateAnimationFunc}
         activateAnimation={activateAnimation}
