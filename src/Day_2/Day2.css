@@ -1,0 +1,81 @@
+.animation-type {
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+.modal {
+  width: 50%;
+  margin: auto;
+  background-color: #424769;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 1em 1.5em;
+  border-radius: 10px;
+  clip-path: circle(15% at 0 0);
+  position: relative;
+  transition: clip-path 0.5s linear;
+}
+
+.modal-title {
+  font-size: 28px;
+  text-align: center;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modal:hover {
+  clip-path: circle(100% at 50% 50%);
+}
+
+.modal:hover .icon {
+  display: none;
+}
+
+/* Hamburber button */
+.hamburger-menu {
+    margin: auto;
+  width: 40px;
+  height: 40px;
+  
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transform-origin: center;
+  transition: all 500ms;
+}
+.line:nth-child(1) {
+    top: 0;
+}
+.line:nth-child(2) {
+    top: 20px;
+    transform: translateY(-50%);
+}
+.line:nth-child(3) {
+    bottom: 0;
+}
+
+.active .line:nth-child(1) {
+    top: 20px;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.active .line:nth-child(2) {
+    transform: scale(0);
+}
+
+.active .line:nth-child(3) {
+    bottom: 20px;
+    transform: translateY(50%) rotate(-45deg);
+}
