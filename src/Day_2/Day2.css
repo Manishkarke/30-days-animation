@@ -39,10 +39,10 @@
 
 /* Hamburber button */
 .hamburger-menu {
-    margin: auto;
+  margin: auto;
   width: 40px;
   height: 40px;
-  
+
   position: relative;
 }
 
@@ -56,26 +56,194 @@
   transition: all 500ms;
 }
 .line:nth-child(1) {
-    top: 0;
+  top: 0;
 }
 .line:nth-child(2) {
-    top: 20px;
-    transform: translateY(-50%);
+  top: 20px;
+  transform: translateY(-50%);
 }
 .line:nth-child(3) {
-    bottom: 0;
+  bottom: 0;
 }
 
 .active .line:nth-child(1) {
-    top: 20px;
-    transform: translateY(-50%) rotate(45deg);
+  top: 20px;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .active .line:nth-child(2) {
-    transform: scale(0);
+  transform: scale(0);
 }
 
 .active .line:nth-child(3) {
-    bottom: 20px;
-    transform: translateY(50%) rotate(-45deg);
+  bottom: 20px;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+/* Offset Animation */
+.area {
+  margin: auto;
+  border: 1px solid;
+  width: 500px;
+  aspect-ratio: 1/1;
+  position: relative;
+
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.path {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  aspect-ratio: 1/1;
+  border: 2px solid #3498db; /* Adjust the color and thickness of the path border */
+  border-radius: 50%;
+  z-index: -1;
+}
+.ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #dea30d;
+  transition: all 2s;
+
+  offset-path: circle(100px at 50% 50%);
+  offset-anchor: 50% 50%;
+  offset-distance: 0;
+}
+
+.area:hover .ball {
+  offset-distance: 100%;
+}
+
+/* Loading animation - bars */
+.animations {
+  display: flex;
+  gap: 1.5em;
+  padding: 1.5em 0;
+  justify-content: center;
+  align-items: center;
+}
+.loading-box {
+  width: 100px;
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.loading-box .bar {
+  width: 10px;
+  height: 10px;
+  background-color: #3498db;
+  animation: scaleLoading 1s linear infinite alternate;
+}
+
+.loading-box .bar:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.loading-box .bar:last-child {
+  animation-delay: 0.25s;
+}
+
+.spinner {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: spinner 2s linear infinite;
+}
+.spinner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateY(-50%);
+  background-color: aqua;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.bounce-loading {
+  width: 100px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.bounce-loading .circle {
+  width: 15px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: jumpLoading 1s linear infinite alternate;
+}
+.bounce-loading .circle:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.bounce-loading .circle:nth-child(3) {
+  animation-delay: 0.75s;
+}
+
+.spinner-2 {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border: 8px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+}
+
+.spinner-2::after {
+  content: "";
+  width: 50px;
+  height: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  background-color: #dea30d;
+}
+
+@keyframes jumpLoading {
+  50% {
+    /* transform: translateY(-8px); */
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(2turn);
+  }
+}
+@keyframes scaleLoading {
+  to {
+    transform: scaleY(3);
+  }
+}
+
+/* Text Animations */
+
+.text-animations {
+  animation: stretchText 1s linear infinite alternate;
+}
+@keyframes stretchText {
+  0% {
+    letter-spacing: -5px;
+  }
+  50% {
+    letter-spacing: 5px;
+  }
+  100% {
+    letter-spacing: auto;
+  }
 }

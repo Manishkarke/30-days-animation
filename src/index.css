@@ -18,7 +18,7 @@
 
 /* Only show focus outline when the user is tabbing (not when clicking) */
 *:focus {
-  outline: none;
+  /* outline: none; */
 }
 
 *:focus-visible {

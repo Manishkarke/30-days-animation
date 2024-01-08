@@ -2,6 +2,9 @@ import React from "react";
 import "./Day2.css";
 import ModalAnimation from "./ModalAnimation";
 import HamburgerMenu from "./HamburgerMenu";
+import OffsetAnimation from "./OffsetAnimation";
+import LoadingAnimations from "./LoadingAnimations";
+import { TextAnimations } from "./TextAnimations";
 
 function Animations() {
   return (
@@ -14,6 +17,12 @@ function Animations() {
       <ModalAnimation />
       <hr />
       <HamburgerMenu />
+      <hr />
+      <OffsetAnimation />
+      <hr />
+      <LoadingAnimations />
+      <hr />
+      <TextAnimations />
     </section>
   );
 }
