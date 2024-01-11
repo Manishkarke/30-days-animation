@@ -1,12 +1,10 @@
 import "./App.css";
-import SimpleTransition from "./Day_1/SimpleTransition";
-import Animations from "./Day_2/Animations";
-import { ThreeDAnimation } from "./Day_3/3DAnimation";
+import { OffsetAnimation } from "./Day_5/OffsetAnimation";
 
 function App() {
   return (
     <main className="main-container">
-      <ThreeDAnimation />
+      <OffsetAnimation />
     </main>
   );
 }

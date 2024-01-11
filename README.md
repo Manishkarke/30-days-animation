@@ -15,3 +15,35 @@ transition: transition-element | transition-duration | transition-timing-functio
 > **transition-timing-function** : how our transition gonna be executed. speed/acceleration of the transition. Values are linear , ease-in, ease-out, ease-in-out and curbic-bezier-function.
 >
 > **transition-delay** : time after which the transition will be started. value are time values.
+
+----------
+----------
+
+## DAY 4 : Learning CSS GRADIENTS
+> Today I learned about CSS Gradients. CSS gradients are those values function which allow us to use more than one color as a background. We give css gradients value as a value to background-image property. There are 6 types of gradients. 
+> - linear-gradient() : The linear-gradient() CSS function creates an image consisting of a progressive transition between two or more colors along a straight line. <br />
+    ```CSS 
+    background-image: linear-gradient(direction, color-1 | color-stop, color-2 | color-stop, .....)
+    ``` <br />
+>
+> here direction is the direction of the transition between two or more colors. value are given in angle or to top |      center | bottom  left | center | right <br/>
+> color-n means nth color in our transition <br/
+>
+> color-stop is the distance from which the color start transitioning.
+>
+> - radial-gradient() : The radial-gradient() css function creates an image consisting of progressive transition between two or more colors that radiate from an origin.<br />
+```CSS
+background-image: radial-gradient(radial-shape radial-size at position, color-stop-list)
+```
+> <br /> here radial-shape is the shape of our gradient which is either circle or ellipse. <br />
+> here radial-size is the size of our radial-gradient which value is farthest-corner | closest-side | farthest-side | closest-corner <br />
+> here position is the position of the center of our radial-gradient <br />
+> here color-stop list means list of color for transition and stop for each color which defines where the transition begins <br />
+>
+> - conic-gradient() : The conic-gradient() css function creates an image consisting of progressive transition between two or more colors that rotate around a center point. <br />
+```CSS
+background-image: conic-gradient([from angle] [at position], color degree, color degree)
+```
+> <br />Here from angle means from which angle our transition begin. <br />
+> here at position means the position of the center point of our transition <br />
+> here color degree means the degree from which the transition begins. <br />

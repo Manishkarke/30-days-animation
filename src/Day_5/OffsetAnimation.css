@@ -1,0 +1,74 @@
+.animation-container {
+  padding: 2em 1em;
+  border: 1px solid #ccc;
+}
+
+.animation {
+  border: 1px solid #cce;
+  height: 500px;
+
+  padding: 1em 1.5em;
+  margin-top: 1em;
+}
+
+.rectangle {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    86deg,
+    rgb(215, 95, 209) 34%,
+    rgba(255, 0, 219, 1) 100%
+  );
+
+  animation: moveInPath 3s linear infinite;
+}
+
+.rectangle.path {
+  offset-path: path("M0,0 L200,0 200,300 0,300 z");
+}
+
+.rectangle.ellipse {
+  offset-path: ellipse(300px 100px at 50% 50%);
+}
+
+.rectangle.circle {
+  offset-path: circle(200px at 50% 50%);
+}
+
+.rectangle.inset {
+  offset-path: inset(10%);
+}
+
+.dynamic-path {
+  offset-path: ellipse(300px 100px at 50% 50%);
+  animation-name: dynamicMoveInPath;
+  animation-duration: 5s;
+}
+
+@keyframes moveInPath {
+  0% {
+    offset-distance: 0;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes dynamicMoveInPath {
+  0% {
+    offset-distance: 0;
+  }
+
+  5% {
+    offset-path: ellipse(400px 20px at 20% 50%);
+  }
+
+  75% {
+    offset-path: ellipse(300px 100px at 50% 50%);
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
